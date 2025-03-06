@@ -116,12 +116,23 @@ footer {
 
 @media (max-width: 1528px) {
     .text-container {
-        font-size: 32px;
+        font-size: 48px;
         top: 50%;
     }
 
     .additional-text {
         font-size: 12px;
         top: 60%;
+    }
+}
+@media (max-width: 768px) {
+    .text-container {
+        font-size: 32px;
+        top: 60%;
+    }
+
+    .additional-text {
+        font-size: 12px;
+        top: 70%;
     }
 }
