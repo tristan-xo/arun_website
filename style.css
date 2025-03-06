@@ -1,9 +1,8 @@
 body {
-    @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&family=Red+Rose:wght@400;700&display=swap');
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    overflow: hidden; /* Prevent scrolling */
+    overflow: auto; /* Prevent scrolling */
 }
 
 header {
@@ -50,9 +49,11 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Full viewport height */
     margin-top: 0;
+    overflow-y: auto; /* Make the main portion scrollable */
+
 }
+
         section#home {
             width: 100%;
             height: 100vh; /* Full viewport height */
@@ -63,46 +64,46 @@ main {
             justify-content: center;
         }
 
-        .image-container {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
+            .image-container {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
 
-        .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensures the image fills the space without distortion */
-        }
+            .image-container img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Ensures the image fills the space without distortion */
+            }
 
-        .text-container {
-            position: absolute; 
-            display: flex; /* Add this line to enable flexbox */
-            font-size: 72px;
-            justify-content: center;
-            align-items: center;
-            top: 60%; 
-            left: 50%; 
-            transform: translate(-50%, -50%);
-            font-family: "Red Rose";
-            color: #FFF600;
-            text-align: center; /* Align text to the center */
-        }
+            .text-container {
+                position: absolute; 
+                display: flex; /* Add this line to enable flexbox */
+                font-size: 72px;
+                justify-content: center;
+                align-items: center;
+                top: 60%; 
+                left: 50%; 
+                transform: translate(-50%, -50%);
+                font-family: "Red Rose";
+                color: #FFF600;
+                text-align: center; /* Align text to the center */
+            }
 
-        .additional-text {
-            position: absolute; 
-            display: flex; /* Add this line to enable flexbox */
-            font-size: 20px;
-            justify-content: center;
-            align-items: center;
-            top: 68%; 
-            left: 50%; 
-            transform: translate(-50%, -50%);
-            font-family: "Red Rose";
-            color: #ffffff;
-            font-weight: 700;
-            text-align: center; /* Align text to the center */
-        }
+            .additional-text {
+                position: absolute; 
+                display: flex; /* Add this line to enable flexbox */
+                font-size: 20px;
+                justify-content: center;
+                align-items: center;
+                top: 68%; 
+                left: 50%; 
+                transform: translate(-50%, -50%);
+                font-family: "Red Rose";
+                color: #ffffff;
+                font-weight: 700;
+                text-align: center; /* Align text to the center */
+            }
 
 footer {
     background-color: #E8E8E8;
@@ -110,6 +111,7 @@ footer {
     text-align: center;
     padding: 10px 0;
     position: fixed;
+    height: 40px;
     width: 100%;
     bottom: 0;
 }
@@ -136,3 +138,82 @@ footer {
         top: 70%;
     }
 }
+
+#about {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 100px;
+    background-color: #ffffff;
+    overflow-y: auto; /* Make the hero section scrollable */
+}
+        #about h1 {
+            font-size: 2rem;
+            margin-bottom: 0px;
+            margin-top: 20px;
+            text-align: center;
+            font-family: "Red Hat Display";
+        }
+
+        #about p {
+            font-size: 24px;
+            line-height: 1.4;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: left;
+            font-family: "Red Hat Display";
+
+        }
+
+        .video-container {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        flex: 1; /* Allow the video container to grow and shrink */
+        }
+
+        video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        }
+
+        .project-container {
+            max-width: 100%;
+            height: auto; /* Adjust height to auto to fit content */
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap */
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            background-color: #fff;
+            overflow-y: auto;
+            padding: 20px 100px; /* Add padding for better spacing */
+        }
+
+        .project-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+@media (max-width: 768px) {
+    #about h1 {
+        font-size: 1.5rem;
+        margin-top: 10px;
+    }
+    #about p {
+        font-size: 18px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
+    .project-container {
+        padding: 10px 20px;
+    }
+}
+    
