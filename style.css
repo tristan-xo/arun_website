@@ -148,6 +148,7 @@ footer {
     margin-bottom: 100px;
     background-color: #ffffff;
     overflow-y: auto; /* Make the hero section scrollable */
+    width: 100%;
 }
         #about h1 {
             font-size: 2rem;
@@ -173,6 +174,8 @@ footer {
         margin: 0;
         padding: 0;
         flex: 1; /* Allow the video container to grow and shrink */
+        left: 0;
+        right: 0;
         }
 
         video {
